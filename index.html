@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/assets/browser"></script><style>/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+    --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+    --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-4xl: 56rem;
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --radius-2xl: 1rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-7 {
+    margin-top: calc(var(--spacing) * 7);
+  }
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
+  }
+  .mt-30 {
+    margin-top: calc(var(--spacing) * 30);
+  }
+  .mt-52 {
+    margin-top: calc(var(--spacing) * 52);
+  }
+  .mt-56 {
+    margin-top: calc(var(--spacing) * 56);
+  }
+  .mt-\[23px\] {
+    margin-top: 23px;
+  }
+  .mt-\[38px\] {
+    margin-top: 38px;
+  }
+  .mt-\[134px\] {
+    margin-top: 134px;
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-7 {
+    margin-bottom: calc(var(--spacing) * 7);
+  }
+  .mb-12 {
+    margin-bottom: calc(var(--spacing) * 12);
+  }
+  .mb-30 {
+    margin-bottom: calc(var(--spacing) * 30);
+  }
+  .mb-32 {
+    margin-bottom: calc(var(--spacing) * 32);
+  }
+  .mb-\[38px\] {
+    margin-bottom: 38px;
+  }
+  .ml-\[60px\] {
+    margin-left: 60px;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
+  .h-52 {
+    height: calc(var(--spacing) * 52);
+  }
+  .h-\[27rem\] {
+    height: 27rem;
+  }
+  .h-\[82px\] {
+    height: 82px;
+  }
+  .h-\[533px\] {
+    height: 533px;
+  }
+  .h-auto {
+    height: auto;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
+  .w-1\/3 {
+    width: calc(1/3 * 100%);
+  }
+  .w-1\/4 {
+    width: calc(1/4 * 100%);
+  }
+  .w-2\/3 {
+    width: calc(2/3 * 100%);
+  }
+  .w-3\/4 {
+    width: calc(3/4 * 100%);
+  }
+  .w-4xl {
+    width: var(--container-4xl);
+  }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
+  }
+  .w-71\.5 {
+    width: calc(var(--spacing) * 71.5);
+  }
+  .w-\[135px\] {
+    width: 135px;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-4xl {
+    max-width: var(--container-4xl);
+  }
+  .max-w-72 {
+    max-width: calc(var(--spacing) * 72);
+  }
+  .max-w-\[1140px\] {
+    max-width: 1140px;
+  }
+  .translate-x-2\/5 {
+    --tw-translate-x: calc(2/5 * 100%);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-2\/5 {
+    --tw-translate-y: calc(calc(2/5 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .list-inside {
+    list-style-position: inside;
+  }
+  .list-disc {
+    list-style-type: disc;
+  }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .place-items-center {
+    place-items: center;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .space-y-5 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-6 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-8 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .gap-x-6 {
+    column-gap: calc(var(--spacing) * 6);
+  }
+  .gap-x-12 {
+    column-gap: calc(var(--spacing) * 12);
+  }
+  .gap-x-\[110\.67px\] {
+    column-gap: 110.67px;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .bg-\[\#E95A08\] {
+    background-color: #E95A08;
+  }
+  .bg-black\/40 {
+    background-color: color-mix(in srgb, #000 40%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 40%, transparent);
+    }
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-\[url\(\'assets\/deal-ana\.png\'\)\] {
+    background-image: url('assets/deal-ana.png');
+  }
+  .bg-\[url\(\'assets\/deal-bloom\.png\'\)\] {
+    background-image: url('assets/deal-bloom.png');
+  }
+  .bg-\[url\(\'assets\/deal-zabo\.png\'\)\] {
+    background-image: url('assets/deal-zabo.png');
+  }
+  .bg-\[url\(assets\/news-letter-bg\.png\)\] {
+    background-image: url(assets/news-letter-bg.png);
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-center {
+    background-position: center;
+  }
+  .bg-no-repeat {
+    background-repeat: no-repeat;
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .font-\[\'Inter\'\,sans-serif\] {
+    font-family: 'Inter',sans-serif;
+  }
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-\[22px\] {
+    font-size: 22px;
+  }
+  .text-\[50px\] {
+    font-size: 50px;
+  }
+  .text-\[65px\] {
+    font-size: 65px;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .text-\[\#8987A1\] {
+    color: #8987A1;
+  }
+  .text-\[\#252432\] {
+    color: #252432;
+  }
+  .text-\[\#E95A08\] {
+    color: #E95A08;
+  }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .opacity-50 {
+    opacity: 50%;
+  }
+  .drop-shadow-\[0_4px_8px_rgba\(0\,0\,0\,1\)\] {
+    --tw-drop-shadow-size: drop-shadow(0 4px 8px var(--tw-drop-shadow-color, rgba(0,0,0,1)));
+    --tw-drop-shadow: var(--tw-drop-shadow-size);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
+  .hover\:no-underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: none;
+      }
+    }
+  }
+  .max-sm\:col-span-1 {
+    @media (width < 40rem) {
+      grid-column: span 1 / span 1;
+    }
+  }
+  .max-sm\:mx-4 {
+    @media (width < 40rem) {
+      margin-inline: calc(var(--spacing) * 4);
+    }
+  }
+  .max-sm\:mt-3\.5 {
+    @media (width < 40rem) {
+      margin-top: calc(var(--spacing) * 3.5);
+    }
+  }
+  .max-sm\:mt-5 {
+    @media (width < 40rem) {
+      margin-top: calc(var(--spacing) * 5);
+    }
+  }
+  .max-sm\:mt-7 {
+    @media (width < 40rem) {
+      margin-top: calc(var(--spacing) * 7);
+    }
+  }
+  .max-sm\:mt-10 {
+    @media (width < 40rem) {
+      margin-top: calc(var(--spacing) * 10);
+    }
+  }
+  .max-sm\:mt-16 {
+    @media (width < 40rem) {
+      margin-top: calc(var(--spacing) * 16);
+    }
+  }
+  .max-sm\:mt-\[143px\] {
+    @media (width < 40rem) {
+      margin-top: 143px;
+    }
+  }
+  .max-sm\:mb-4 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 4);
+    }
+  }
+  .max-sm\:mb-5 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 5);
+    }
+  }
+  .max-sm\:mb-8 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 8);
+    }
+  }
+  .max-sm\:mb-10 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 10);
+    }
+  }
+  .max-sm\:mb-12 {
+    @media (width < 40rem) {
+      margin-bottom: calc(var(--spacing) * 12);
+    }
+  }
+  .max-sm\:ml-\[17px\] {
+    @media (width < 40rem) {
+      margin-left: 17px;
+    }
+  }
+  .max-sm\:hidden {
+    @media (width < 40rem) {
+      display: none;
+    }
+  }
+  .max-sm\:h-64 {
+    @media (width < 40rem) {
+      height: calc(var(--spacing) * 64);
+    }
+  }
+  .max-sm\:h-\[38px\] {
+    @media (width < 40rem) {
+      height: 38px;
+    }
+  }
+  .max-sm\:h-\[275px\] {
+    @media (width < 40rem) {
+      height: 275px;
+    }
+  }
+  .max-sm\:w-80 {
+    @media (width < 40rem) {
+      width: calc(var(--spacing) * 80);
+    }
+  }
+  .max-sm\:w-\[63px\] {
+    @media (width < 40rem) {
+      width: 63px;
+    }
+  }
+  .max-sm\:w-\[321px\] {
+    @media (width < 40rem) {
+      width: 321px;
+    }
+  }
+  .max-sm\:w-full {
+    @media (width < 40rem) {
+      width: 100%;
+    }
+  }
+  .max-sm\:max-w-44 {
+    @media (width < 40rem) {
+      max-width: calc(var(--spacing) * 44);
+    }
+  }
+  .max-sm\:max-w-80 {
+    @media (width < 40rem) {
+      max-width: calc(var(--spacing) * 80);
+    }
+  }
+  .max-sm\:grid-cols-1 {
+    @media (width < 40rem) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+  .max-sm\:grid-cols-2 {
+    @media (width < 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .max-sm\:flex-col {
+    @media (width < 40rem) {
+      flex-direction: column;
+    }
+  }
+  .max-sm\:flex-col-reverse {
+    @media (width < 40rem) {
+      flex-direction: column-reverse;
+    }
+  }
+  .max-sm\:justify-start {
+    @media (width < 40rem) {
+      justify-content: flex-start;
+    }
+  }
+  .max-sm\:space-y-4 {
+    @media (width < 40rem) {
+      :where(& > :not(:last-child)) {
+        --tw-space-y-reverse: 0;
+        margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+        margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+      }
+    }
+  }
+  .max-sm\:gap-x-4 {
+    @media (width < 40rem) {
+      column-gap: calc(var(--spacing) * 4);
+    }
+  }
+  .max-sm\:p-6 {
+    @media (width < 40rem) {
+      padding: calc(var(--spacing) * 6);
+    }
+  }
+  .max-sm\:pt-10 {
+    @media (width < 40rem) {
+      padding-top: calc(var(--spacing) * 10);
+    }
+  }
+  .max-sm\:text-center {
+    @media (width < 40rem) {
+      text-align: center;
+    }
+  }
+  .max-sm\:text-2xl {
+    @media (width < 40rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .max-sm\:text-xl {
+    @media (width < 40rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .max-sm\:text-\[14px\] {
+    @media (width < 40rem) {
+      font-size: 14px;
+    }
+  }
+  .max-sm\:text-\[16px\] {
+    @media (width < 40rem) {
+      font-size: 16px;
+    }
+  }
+  .max-sm\:text-\[20px\] {
+    @media (width < 40rem) {
+      font-size: 20px;
+    }
+  }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-space-y-reverse: 0;
+      --tw-font-weight: initial;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
+      --tw-duration: initial;
+    }
+  }
+}
+</style>
+    <link rel="stylesheet" href="/assets/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="/assets/css2" rel="stylesheet">
+    <title>Programming Hero Assignment 2: Batch 12</title>
+</head>
+
+<body>
+    <header class="max-w-[1140px] mx-auto mt-7 max-sm:mx-4 max-sm:mt-3.5">
+        <!-- Navbar Section -->
+        <nav class="flex justify-between items-center">
+            <div>
+                <img class="w-[135px] h-[82px] max-sm:w-[63px] max-sm:h-[38px] sml" src="/assets/logo.png" alt="This is logo of this website">
+            </div>
+            <div>
+                <ul class="flex gap-x-12 max-sm:gap-x-4">
+                    <li class="max-sm:hidden font-bold text-[#252432]"><a href="BLANK">Home</a></li>
+                    <li class="max-sm:hidden text-[#8987A1]"><a href="BLANK">Shop</a></li>
+                    <li class="max-sm:hidden text-[#8987A1]"><a href="BLANK">About us</a></li>
+                    <li><a href="BLANK"><i class="fa-solid fa-cart-shopping"></i> Cart ($56)</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!--Banner Section -->
+        <div class="flex justify-between mt-30 max-sm:mt-7 max-sm:flex-col-reverse">
+            <div class="w-1/2 max-sm:w-full">
+                <h3 class="font-serif font-bold text-[65px] max-sm:text-2xl max-sm:mt-7">
+                    <span>ALWAYS</span> <span class="text-[#E95A08]">FRESH</span> <br> <span>FLOWERS</span>
+                </h3>
+                <p class="font-[&#39;Inter&#39;,sans-serif] font-normal text-[22px] max-sm:text-[14px] text-black opacity-50">
+                    Indulge your senses with the beauty and fragrance of our fresh flower shop.
+                    From classic roses to exotic blooms, we offer a wide variety of fresh flowers
+                    that are perfect for any occasion.
+                </p>
+            </div>
+            <div class="w-1/2 max-sm:w-full">
+                <img class="w-full" src="/assets/hero-flower.png" alt="Flow image of hero section">
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="max-w-[1140px] mx-auto mt-7 max-sm:mx-4 max-sm:mt-3.5">
+            <!-- Plants Section -->
+            <div class="mt-56 max-sm:mt-16">
+                <div class="text-center">
+                    <h3 class="font-serif font-bold text-5xl max-sm:text-2xl mb-4">
+                        <span class="text-[#E95A08]">Our</span> Plants
+                    </h3>
+                    <p class="font-[&#39;Inter&#39;,sans-serif] font-normal text-[22px] max-sm:text-[14px] text-black opacity-50 w-4xl max-sm:w-80 mx-auto">
+                        Indulge your senses with the beauty and fragrance of our fresh flower shop.
+                        From classic roses to exotic blooms, we offer a wide variety of fresh.
+                    </p>
+                </div>
+                <div class="mt-12 max-sm:mt-7 grid grid-cols-4 max-sm:grid-cols-2 gap-5 place-items-center">
+                    <div class="max-w-72 max-sm:max-w-44 text-center font-[&#39;Inter&#39;,sans-serif] ">
+                        <img class="w-full" src="/assets/sample-flower-image.png" alt="">
+                        <div class="mt-7 mb-7">
+                            <p class="font-medium">Lily Blossom</p>
+                            <p class="font-bold">20 USD</p>
+                        </div>
+                        <button class="bg-[#E95A08] text-white font-semibold text-base w-full h-12" "="">ADD TO CART</button>
+                  </div>
+                  <div class=" max-w-72 max-sm:max-w-44 text-center font-[&#39;Inter&#39;,sans-serif] ">
+                     <img class=" w-full" src="/assets/sample-flower-image.png" alt="">
+                            <div class="mt-7 mb-7">
+                                <p class="font-medium">Lily Blossom</p>
+                                <p class="font-bold">20 USD</p>
+                            </div>
+                            <button class="bg-[#E95A08] text-white font-semibold text-base w-full h-12" "="">ADD TO CART</button>
+                  </div>
+                  <div class=" max-w-72 max-sm:max-w-44 text-center font-[&#39;Inter&#39;,sans-serif] ">
+                     <img class=" w-full" src="/assets/sample-flower-image.png" alt="">
+                                <div class="mt-7 mb-7">
+                                    <p class="font-medium">Lily Blossom</p>
+                                    <p class="font-bold">20 USD</p>
+                                </div>
+                                <button class="bg-[#E95A08] text-white font-semibold text-base w-full h-12" "="">ADD TO CART</button>
+                  </div>
+                  <div class=" max-w-72 max-sm:max-w-44 text-center font-[&#39;Inter&#39;,sans-serif] ">
+                     <img class=" w-full" src="/assets/sample-flower-image.png" alt="">
+                                    <div class="mt-7 mb-7">
+                                        <p class="font-medium">Lily Blossom</p>
+                                        <p class="font-bold">20 USD</p>
+                                    </div>
+                                    <button class="bg-[#E95A08] text-white font-semibold text-base w-full h-12" "="">ADD TO CART</button>
+                  </div>
+                  <div class=" max-w-72 max-sm:max-w-44 text-center font-[&#39;Inter&#39;,sans-serif] ">
+                     <img class=" w-full" src="/assets/sample-flower-image.png" alt="">
+                                        <div class="mt-7 mb-7">
+                                            <p class="font-medium">Lily Blossom</p>
+                                            <p class="font-bold">20 USD</p>
+                                        </div>
+                                        <button class="bg-[#E95A08] text-white font-semibold text-base w-full h-12" "="">ADD TO CART</button>
+                  </div>
+                  <div class=" max-w-72 max-sm:max-w-44 text-center font-[&#39;Inter&#39;,sans-serif] ">
+                     <img class=" w-full" src="/assets/sample-flower-image.png" alt="">
+                                            <div class="mt-7 mb-7">
+                                                <p class="font-medium">Lily Blossom</p>
+                                                <p class="font-bold">20 USD</p>
+                                            </div>
+                                            <button class="bg-[#E95A08] text-white font-semibold text-base w-full h-12" "="">ADD TO CART</button>
+                  </div>
+                  <div class=" max-w-72 max-sm:max-w-44 text-center font-[&#39;Inter&#39;,sans-serif] ">
+                     <img class=" w-full" src="/assets/sample-flower-image.png" alt="">
+                                                <div class="mt-7 mb-7">
+                                                    <p class="font-medium">Lily Blossom</p>
+                                                    <p class="font-bold">20 USD</p>
+                                                </div>
+                                                <button class="bg-[#E95A08] text-white font-semibold text-base w-full h-12" "="">ADD TO CART</button>
+                  </div>
+                  <div class=" max-w-72 max-sm:max-w-44 text-center font-[&#39;Inter&#39;,sans-serif] ">
+                     <img class=" w-full" src="/assets/sample-flower-image.png" alt="">
+                                                    <div class="mt-7 mb-7">
+                                                        <p class="font-medium">Lily Blossom</p>
+                                                        <p class="font-bold">20 USD</p>
+                                                    </div>
+                                                    <button class="bg-[#E95A08] text-white font-semibold text-base w-full h-12" "="">ADD TO CART</button>
+                  </div>
+               </div>
+            </div>
+
+
+            <!-- Plants Lover Section -->
+            <div class=" flex items-center justify-center max-w-[1140px] mx-auto mt-52 max-sm:mt-10 max-sm:flex-col ">
+               <div class=" w-1/2 max-sm:w-full">
+                                                        <div class="relative inline-block">
+                                                            <img class="" src="/assets/flower-store.png" alt="A man organizing flower in the store">
+                                                            <img class="max-sm:hidden w-71.5 absolute top-0 right-0 translate-x-2/5 -translate-y-2/5 drop-shadow-[0_4px_8px_rgba(0,0,0,1)]" src="trusted-badge.png" alt="Trusted badge">
+                                                        </div>
+                    </div>
+                    <div class="w-1/2 max-sm:w-full max-sm:mt-5 ml-[60px] mt-[38px] mb-[38px] max-sm:ml-[17px]">
+                        <h1 class="font-serif font-bold text-[50px] max-sm:text-2xl mb-5 max-sm:4">
+                            Flower &amp; Plants Lover
+                        </h1>
+                        <ul class="list-disc list-inside font-[&#39;Inter&#39;,sans-serif] font-normal text-[22px] max-sm:text-[14px] opacity-50 space-y-5 max-sm:space-y-4">
+                            <li>Indulge your senses with the beauty and fragrance of our
+                                fresh flower shop. From classic roses to exotic blooms,
+                                we offer a wide variety of fresh.
+                            </li>
+                            <li>Indulge your senses with the beauty and fragrance of our
+                                fresh flower shop. From classic roses to exotic blooms,
+                                we offer a wide variety of fresh.
+                            </li>
+                            <li>Indulge your senses with the beauty and fragrance of our
+                                fresh flower shop. From classic roses to exotic blooms,
+                                we offer a wide variety of fresh.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- Latest Deal Section -->
+                <div class="max-sm:mt-[143px] mt-[134px] mb-30 max-sm:mb-10">
+                    <div class="text-center mb-32 max-sm:mb-12">
+                        <h3 class="font-serif font-bold text-5xl max-sm:text-2xl mb-4">
+                            <span class="text-[#E95A08]">Latest</span> Deals
+                        </h3>
+                        <p class="font-[&#39;Inter&#39;,sans-serif] font-normal text-[22px] max-sm:text-[14px] text-black opacity-50 max-w-4xl max-sm:max-w-80 mx-auto">
+                            Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic
+                            roses to exotic blooms, we offer a wide variety of fresh.
+                        </p>
+                    </div>
+
+                    <div class="flex justify-between items-start text-white font-serif font-bold gap-6 max-sm:flex-col text-center">
+
+                        <div class="w-1/3 max-sm:w-full space-y-6">
+                            <!-- Bloom Plant Deal -->
+                            <div class="relative bg-[url(&#39;assets/deal-bloom.png&#39;)] bg-no-repeat bg-cover bg-center h-52 max-sm:h-64 rounded-2xl overflow-hidden">
+                                <div class="absolute inset-0 bg-black/40 rounded-2xl"></div>
+                                <div class="relative z-10 p-4 max-sm:p-6 h-full flex flex-col justify-center">
+                                    <h4 class="text-xl max-sm:text-2xl mb-2 max-sm:mb-4">60% Off | Bloom Plant</h4>
+                                    <a class="underline font-[&#39;Inter&#39;,sans-serif] font-semibold text-lg max-sm:text-xl hover:no-underline transition-all duration-300" href="BLANK" aria-label="Shop Bloom Plant deals">Shop Now</a>
+                                </div>
+                            </div>
+                            <!-- Ana Plant Deal -->
+                            <div class="relative bg-[url(&#39;assets/deal-ana.png&#39;)] bg-no-repeat bg-cover bg-center h-52 max-sm:h-64 rounded-2xl overflow-hidden">
+                                <div class="absolute inset-0 bg-black/40 rounded-2xl"></div>
+                                <div class="relative z-10 p-4 max-sm:p-6 h-full flex flex-col justify-center rounded-2xl">
+                                    <h4 class="text-xl max-sm:text-2xl mb-2 max-sm:mb-4">30% Off | Ana Plant</h4>
+                                    <a class="underline font-[&#39;Inter&#39;,sans-serif] font-semibold text-lg max-sm:text-xl hover:no-underline transition-all duration-300" href="BLANK" aria-label="Shop Ana Plant deals">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Zabo Plant Deal -->
+                        <div class="relative w-2/3 max-sm:w-full bg-[url(&#39;assets/deal-zabo.png&#39;)] bg-no-repeat bg-cover bg-center h-[27rem] max-sm:h-64 rounded-2xl overflow-hidden">
+                            <div class="absolute inset-0 bg-black/40 rounded-2xl"></div>
+                            <div class="relative z-10 p-6 h-full flex flex-col justify-center">
+                                <h4 class="text-4xl max-sm:text-2xl mb-4">25% Off | Zabo Plant</h4>
+                                <a class="underline font-[&#39;Inter&#39;,sans-serif] font-semibold text-2xl max-sm:text-xl hover:no-underline transition-all duration-300" href="BLANK" aria-label="Shop Zabo Plant deals">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Join Section -->
+            <div class="w-full bg-[url(assets/news-letter-bg.png)] h-[533px] max-sm:h-[275px] bg-no-repeat bg-cover bg-center flex items-center justify-center">
+                <div class="max-sm:w-[321px] max-sm:pt-10">
+                    <h1 class="font-serif font-bold text-[50px] max-sm:text-[20px] max-sm:text-center text-white">
+                        Join
+                        the colorful Bunch</h1>
+
+                    <div class="w-full flex mt-[23px]">
+                        <input class="w-3/4 bg-white p-2" type="email" name="" id="" placeholder="Write email">
+                        <button class="w-1/4 bg-[#E95A08] text-white font-semibold text-base h-12" "="">Subscribe</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer class=" max-w-[1140px] mx-auto mt-12 max-sm:mx-4 max-sm:mt-3.5 mb-12">
+                            <!-- Footer Section -->
+
+                            <div class="grid grid-cols-5 gap-x-[110.67px]  max-sm:grid-cols-1">
+                                <div class="col-span-2 max-sm:col-span-1 max-sm:mb-5">
+                                    <img class="w-[135px] h-auto" src="logo.png" alt="footer logo">
+                                    <p class="font-[&#39;Inter&#39;,sans-serif] font-normal text-[22px] max-sm:text-[16px] text-black opacity-50 mt-4">
+                                        Indulge your senses with the beauty and fragrance of our fresh flower shop.
+                                    </p>
+                                </div>
+                                <div class="text-gray-500 max-sm:mb-8">
+                                    <ul class="space-y-8">
+                                        <li>Home</li>
+                                        <li>About Us</li>
+                                        <li>Blog</li>
+                                        <li>FAQ</li>
+                                        <li>Contact Us</li>
+                                    </ul>
+                                </div>
+                                <div class="text-gray-500 max-sm:mb-8">
+                                    <ul class="space-y-8">
+                                        <li>Features</li>
+                                        <li>Pricing</li>
+                                        <li>Privacy Policy</li>
+                                        <li>Terms of Service</li>
+                                        <li>Help Center</li>
+                                    </ul>
+                                </div>
+                                <div class="flex justify-between gap-x-6 max-sm:justify-start">
+                                    <img class="w-9 h-9" src="/assets/icon-linkedin.png" alt="LinkedIn icon">
+                                    <img class="w-9 h-9" src="/assets/icon-twitter.png" alt="Twitter icon">
+                                    <img class="w-9 h-9" src="/assets/icon-facebook.png" alt="Facebook icon">
+                                    <img class="w-9 h-9" src="assets/icon-youtube.png" alt="Youtube Icon">
+                                </div>
+
+                            </div>
+                            </footer>
+
+
+</body></html>
